@@ -1,5 +1,5 @@
 package ListaEstatica;
-public class AListaEstatica {
+public class ListaEstatica {
     private int[] info;
     private int tamanho;
 
