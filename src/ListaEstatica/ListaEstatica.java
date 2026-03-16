@@ -3,7 +3,7 @@ public class ListaEstatica {
     private int[] info;
     private int tamanho;
 
-    public void ListaEstatica() {
+    public ListaEstatica() {
         info = new int[10];
         tamanho = 0;
     }
