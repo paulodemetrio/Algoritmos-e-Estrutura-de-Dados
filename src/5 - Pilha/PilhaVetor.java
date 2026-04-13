@@ -14,7 +14,7 @@ public class PilhaVetor<T> implements Pilha<T> {
 
     public void push(T t) {
         if (tamanho == limite) {
-            throw new PilhaCheiaException("Pilha cheia");
+            //throw new PilhaCheiaException("Pilha cheia");
         }
         info[tamanho] = t;
         tamanho++;
@@ -22,7 +22,7 @@ public class PilhaVetor<T> implements Pilha<T> {
 
     public T pop() {
         if (estaVazio()) {
-            throw new PilhaVaziaException("Pilha vazia");
+            //throw new PilhaVaziaException("Pilha vazia");
         }
         T valor = (T) info[tamanho - 1];
         info[tamanho - 1] = null;
@@ -32,7 +32,7 @@ public class PilhaVetor<T> implements Pilha<T> {
 
     public T peek() {
         if (estaVazio()) {
-            throw new PilhaVaziaException("Pilha vazia");
+            //throw new PilhaVaziaException("Pilha vazia");
         }
         return (T) info[tamanho - 1];
     }
