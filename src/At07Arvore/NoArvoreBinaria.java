@@ -1,35 +1,40 @@
 package At07Arvore;
 
-public class NoArvoreBinaria {
-    private int info;
-    private NoArvoreBinaria esq;
-    private NoArvoreBinaria dir;
+public class NoArvoreBinaria<T> {
 
-    public NoArvoreBinaria (int info, NoArvoreBinaria esq, NoArvoreBinaria dir) {
+    private T info;
+    private NoArvoreBinaria<T> esq;
+    private NoArvoreBinaria<T> dir;
+
+    public NoArvoreBinaria(T info) {
+        this.info = info;
+        this.esq = null;
+        this.dir = null;
+    }
+
+    public NoArvoreBinaria(T info, NoArvoreBinaria<T> esq, NoArvoreBinaria<T> dir) {
         this.info = info;
         this.esq = esq;
         this.dir = dir;
     }
 
-    public int getInfo() {
+    public T getInfo() {
         return info;
     }
-    
-    public NoArvoreBinaria getEsquerda() {
+
+    public NoArvoreBinaria<T> getEsquerda() {
         return esq;
     }
 
-    public void setEsquerda(NoArvoreBinaria esq) {
+    public void setEsquerda(NoArvoreBinaria<T> esq) {
         this.esq = esq;
     }
-    
-    public NoArvoreBinaria getDireita() {
+
+    public NoArvoreBinaria<T> getDireita() {
         return dir;
     }
 
-    public void setDireita(NoArvoreBinaria dir) {
+    public void setDireita(NoArvoreBinaria<T> dir) {
         this.dir = dir;
     }
-
-    
 }
