@@ -15,7 +15,7 @@ public class Arvore<T> {
     public void setRaiz(NoArvore<T> raiz) {
         this.raiz = raiz;
     }
-    
+
     public boolean pertence(T info) {
         if (this.raiz == null) {
             return false;
@@ -60,14 +60,13 @@ public class Arvore<T> {
     }
 
     public int contarNos() {
+        if (raiz == null) {
+            return 0;
+        }
         return contarNos(raiz);
     }
 
     private int contarNos(NoArvore<T> no) {
-        if (no == null) {
-            return 0;
-        }
-
         return 1 + contarNos(no.getPrimeiro()) + contarNos(no.getProximo());
     }
 }
